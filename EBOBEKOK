@@ -1,0 +1,27 @@
+package giris;
+import java.sql.SQLOutput;
+import java.util.Scanner;
+public class class3 {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("Büyük sayıyı giriniz: ");
+        int sayi = input.nextInt();
+        System.out.println("Küçük sayıyı giriniz: ");
+        int sayi2 = input.nextInt();
+        int ebob = 1;
+        int i = 1;
+        while(i<=sayi){
+            if (sayi % i == 0 && sayi2%i==0){
+                ebob = i;
+                i++;
+            }else {
+                i++;
+            }
+        }
+        System.out.println("2 sayının En büyük ortak böleni: "+ebob);
+        int ekok = (sayi*sayi2) / ebob;
+        System.out.println("2 sayının en küçük ortak katı: "+ekok);
+        }
+
+}
